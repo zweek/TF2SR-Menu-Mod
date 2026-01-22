@@ -36,7 +36,9 @@ Once that's set, close the Properties window and Right click on the Project in t
 
 To build the .dll, you should be able to hit `Ctrl + B`, which should then also drop the built .dll file in the main `export` folder. And because it's Visual Studio it'll probably also create a bunch of garbage files you don't want in there.
 
-(in case the version matters, which I hope it doesn't, I'm using Visual Studio 2019)
+The above instructions are relevant for Visual Studio 2019.
+
+In order to compile the .dll using Visual Studio 2022, you will need to use the [1.3.4 release of minhook](https://github.com/TsudaKageyu/minhook/releases/tag/v1.3.4), which adds support for Visual Studio 2022. Since as of today (22.01.2026) this version of the package seems to not be available via NuGet or vcpkg, you will need to add it as a dependency manually (In case you need a tutorial, [here](https://www.youtube.com/watch?v=j13iYc6zRuk)). You will also need to remove 1.3.3 from the list of dependencies. You might get an error saying that the library must be compiled using the same compiler, in that case, do so using the [minhook source](https://github.com/TsudaKageyu/minhook).
 
 ## Actually contributing to the repo
 
